@@ -1,0 +1,15 @@
+.characters-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+
+  &-btn {
+    padding: 15px;
+    font-size: 15px;
+    color: #34495e;
+    background: greenyellow;
+    border-radius: 10px;
+  }
+}

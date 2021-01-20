@@ -1,0 +1,49 @@
+.character-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  margin-bottom: 20px;
+  background: rgb(22, 160, 134);
+
+  &-race {
+    color: white;
+    font-size: 17px;
+    margin-bottom: 20px;
+  }
+
+  &-name {
+    color: white;
+    font-size: 20px;
+    font-weight: 900;
+    margin-bottom: 10px;
+  }
+
+  &-btn {
+    transition: .3s;
+    padding: 15px;
+    font-size: 15px;
+    color: #34495e;
+    border-radius: 15px;
+    margin-bottom: 10px;
+  }
+
+  &-btn:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.delete-btn {
+  &:hover {
+    background: red;
+    color: white;
+  }
+}
+
+.change-btn {
+  &:hover {
+    background: #34495e;
+    color: white;
+  }
+}
