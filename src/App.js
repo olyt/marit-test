@@ -8,7 +8,12 @@ const App = () => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch(getCharacters());
+        const socket = new WebSocket("ws://testapi.marit.expert:3004");
+        dispatch(getCharacters(socket));
+
+        return () => {
+            socket.close(1000, "app unmount")
+        }
     }, [dispatch]);
 
     return (

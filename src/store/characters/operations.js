@@ -1,8 +1,6 @@
 import {setCharacters} from "./actions";
 
-export const getCharacters = () => async (dispatch) => {
-    const socket = new WebSocket("ws://testapi.marit.expert:3004");
-
+export const getCharacters = (socket) => async (dispatch) => {
     socket.onopen = () => {
         socket.send({cmd: "get_list"})
     }
