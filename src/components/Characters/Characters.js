@@ -9,7 +9,7 @@ const Characters = () => {
     const races = all.map(item => item.race);
 
     const createListByRace = (race) => {
-        const filtered = all.filter(char => char.race === race);
+        const filtered = [...new Set(all.filter(char => char.race === race))];
 
         return <CharactersList chars={filtered} key={Date.now() + Math.random()}/>
     };
